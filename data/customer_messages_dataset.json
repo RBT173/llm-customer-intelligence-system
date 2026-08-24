@@ -1,0 +1,1481 @@
+[
+  {
+    "id": 1,
+    "message": "I was charged twice for the same transaction and I need this resolved immediately. If not, I will escalate.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Duplicate Charge",
+      "priority": "High",
+      "entities": [
+        "duplicate transaction"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Escalate and verify transaction logs",
+      "response": "We'll escalate and verify transaction logs. You'll receive an update shortly."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 2,
+    "message": "There's a $450 charge on my statement from a merchant I've never heard of.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Fraud Suspicion"
+      ],
+      "issue_type": "Unrecognized Charge",
+      "priority": "High",
+      "entities": [
+        "$450 charge",
+        "unknown merchant"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Open fraud investigation and verify with customer",
+      "response": "Based on our Fraud & Unauthorized Transaction Policy, charges over $100 that remain unrecognized after a merchant descriptor lookup are escalated to the Fraud Team within 1 business hour. We're opening a case now."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs fraud policy for unrecognized charge threshold",
+    "kb_reference": "kb-004",
+    "paraphrase_of": null
+  },
+  {
+    "id": 3,
+    "message": "Why was I charged a $35 overdraft fee when my balance never went negative?",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Dispute"
+      ],
+      "issue_type": "Incorrect Fee",
+      "priority": "Medium",
+      "entities": [
+        "$35 overdraft fee"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Review account ledger and refund if error confirmed",
+      "response": "Per our Billing & Fees Policy, a $35 overdraft fee only applies when your balance actually goes negative after a transaction posts. We'll review your ledger and reverse the fee if it was charged in error."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs overdraft fee policy",
+    "kb_reference": "kb-001",
+    "paraphrase_of": null
+  },
+  {
+    "id": 4,
+    "message": "My refund for the returned purchase still hasn't posted after 2 weeks.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Delayed Refund",
+      "priority": "Medium",
+      "entities": [
+        "refund",
+        "2 weeks delay"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Check refund processing status with merchant acquirer",
+      "response": "We'll check refund processing status with merchant acquirer. You'll receive an update shortly."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 5,
+    "message": "I need to dispute a transaction from last month, the amount doesn't match my receipt.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Dispute"
+      ],
+      "issue_type": "Amount Mismatch",
+      "priority": "Medium",
+      "entities": [
+        "transaction amount mismatch"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Request receipt and open dispute case",
+      "response": "We'll request receipt and open dispute case. You'll receive an update shortly."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 6,
+    "message": "Someone used my card at a gas station in another state while I was at home. That's a $60 charge I never made.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Billing Issue"
+      ],
+      "issue_type": "Unauthorized Transaction",
+      "priority": "Critical",
+      "entities": [
+        "$60 charge",
+        "out-of-state gas station"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Freeze card and open fraud case immediately",
+      "response": "We'll freeze card and open fraud case immediately. You'll receive an update shortly."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 7,
+    "message": "I was double billed for my monthly subscription this cycle.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Duplicate Billing",
+      "priority": "Medium",
+      "entities": [
+        "duplicate subscription charge"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Verify billing cycle and issue refund if duplicate confirmed",
+      "response": "We'll verify billing cycle and issue refund if duplicate confirmed. You'll receive an update shortly."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 8,
+    "message": "The exchange rate applied to my international purchase seems way higher than the market rate.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Inquiry"
+      ],
+      "issue_type": "FX Rate Dispute",
+      "priority": "Low",
+      "entities": [
+        "exchange rate",
+        "international purchase"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Explain FX policy and verify rate applied",
+      "response": "Per our Foreign Transaction & FX Policy, international purchases are converted at the interbank rate plus a 2.5% foreign transaction fee, which is standard across all consumer cards. We'll confirm the exact rate applied to your purchase."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs FX rate/markup policy",
+    "kb_reference": "kb-002",
+    "paraphrase_of": null
+  },
+  {
+    "id": 9,
+    "message": "I paid my credit card bill in full but I'm still being charged interest.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Unexpected Interest Charge",
+      "priority": "Medium",
+      "entities": [
+        "interest charge",
+        "paid in full"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Review payment timing against statement cycle",
+      "response": "Per our Interest & Credit Policy, interest accrues from the transaction date if your payment posts even one day after the statement due date, regardless of amount. We'll check your payment timestamp against the statement cutoff."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs interest/grace period policy",
+    "kb_reference": "kb-003",
+    "paraphrase_of": null
+  },
+  {
+    "id": 10,
+    "message": "My paycheck deposit is missing $200 compared to what my employer said they sent.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Missing Deposit Funds",
+      "priority": "High",
+      "entities": [
+        "$200 missing",
+        "payroll deposit"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Trace deposit transaction and contact originating bank",
+      "response": "We'll trace deposit transaction and contact originating bank. You'll receive an update shortly."
+    },
+    "category": "financial_dispute",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 11,
+    "message": "How do I update the mailing address on my account?",
+    "ground_truth": {
+      "intent": [
+        "Account Update"
+      ],
+      "issue_type": "Address Change",
+      "priority": "Low",
+      "entities": [
+        "mailing address"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Provide self-service instructions for address update",
+      "response": "We'll provide self-service instructions for address update. You'll receive an update shortly."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 12,
+    "message": "I can't log into my online banking, it keeps saying my password is incorrect even after I reset it.",
+    "ground_truth": {
+      "intent": [
+        "Technical Issue",
+        "Account Access"
+      ],
+      "issue_type": "Login Failure",
+      "priority": "Medium",
+      "entities": [
+        "login failure",
+        "password reset"
+      ],
+      "routing": "Technical Support",
+      "suggested_action": "Verify account lock status and guide through reset flow",
+      "response": "We'll verify account lock status and guide through reset flow. You'll receive an update shortly."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 13,
+    "message": "I'd like to add my spouse as a joint account holder.",
+    "ground_truth": {
+      "intent": [
+        "Account Update"
+      ],
+      "issue_type": "Joint Account Request",
+      "priority": "Low",
+      "entities": [
+        "joint account holder"
+      ],
+      "routing": "Account Services",
+      "suggested_action": "Send joint account application requirements",
+      "response": "Per our Account Services Policy, both account holders need to be present (in person or verified video call) with government-issued ID, and a new joint account agreement must be signed by both parties."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs joint account eligibility policy",
+    "kb_reference": "kb-007",
+    "paraphrase_of": null
+  },
+  {
+    "id": 14,
+    "message": "What's the minimum balance required to avoid a monthly maintenance fee?",
+    "ground_truth": {
+      "intent": [
+        "Inquiry"
+      ],
+      "issue_type": "Fee Policy Question",
+      "priority": "Low",
+      "entities": [
+        "minimum balance",
+        "maintenance fee"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Provide fee schedule information",
+      "response": "Per our Billing & Fees Policy, the monthly maintenance fee is waived with a $1,500 minimum daily balance or $500+ in monthly direct deposits."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs account fee schedule/FAQ",
+    "kb_reference": "kb-001",
+    "paraphrase_of": null
+  },
+  {
+    "id": 15,
+    "message": "I want to close my savings account, what's the process?",
+    "ground_truth": {
+      "intent": [
+        "Account Closure"
+      ],
+      "issue_type": "Account Closure Request",
+      "priority": "Low",
+      "entities": [
+        "account closure"
+      ],
+      "routing": "Account Services",
+      "suggested_action": "Provide account closure checklist and confirm identity",
+      "response": "We'll provide account closure checklist and confirm identity. You'll receive an update shortly."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 16,
+    "message": "Can you increase my daily ATM withdrawal limit? I need more cash for a trip.",
+    "ground_truth": {
+      "intent": [
+        "Account Update"
+      ],
+      "issue_type": "Limit Increase Request",
+      "priority": "Low",
+      "entities": [
+        "ATM withdrawal limit"
+      ],
+      "routing": "Account Services",
+      "suggested_action": "Verify identity and process limit increase request",
+      "response": "We'll verify identity and process limit increase request. You'll receive an update shortly."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 17,
+    "message": "I never received my new debit card that was supposed to arrive last week.",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Account Issue"
+      ],
+      "issue_type": "Card Not Received",
+      "priority": "Medium",
+      "entities": [
+        "debit card",
+        "1 week delay"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Check card shipment status and offer reissue",
+      "response": "We'll check card shipment status and offer reissue. You'll receive an update shortly."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 18,
+    "message": "How do I set up automatic bill pay for my electricity provider?",
+    "ground_truth": {
+      "intent": [
+        "Inquiry"
+      ],
+      "issue_type": "Feature Setup Help",
+      "priority": "Low",
+      "entities": [
+        "automatic bill pay"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Walk through bill pay setup steps",
+      "response": "We'll walk through bill pay setup steps. You'll receive an update shortly."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 19,
+    "message": "I got married and need to update the name on my account and cards.",
+    "ground_truth": {
+      "intent": [
+        "Account Update"
+      ],
+      "issue_type": "Name Change Request",
+      "priority": "Low",
+      "entities": [
+        "name change"
+      ],
+      "routing": "Account Services",
+      "suggested_action": "Request legal documentation for name change",
+      "response": "We'll request legal documentation for name change. You'll receive an update shortly."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 20,
+    "message": "Is my account eligible for a premium tier upgrade with lower fees?",
+    "ground_truth": {
+      "intent": [
+        "Inquiry"
+      ],
+      "issue_type": "Tier Upgrade Question",
+      "priority": "Low",
+      "entities": [
+        "premium tier",
+        "fee eligibility"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Check eligibility criteria against account history",
+      "response": "Per our Interest & Credit Policy, Premium Tier requires a $10,000+ average balance over the trailing 3 months, or $2,000+ in monthly qualifying direct deposits. We'll check your account history against these thresholds."
+    },
+    "category": "account_query",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs tier eligibility policy",
+    "kb_reference": "kb-003",
+    "paraphrase_of": null
+  },
+  {
+    "id": 21,
+    "message": "I think someone has access to my account, I'm seeing login attempts from a country I've never visited.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Security Concern"
+      ],
+      "issue_type": "Suspicious Login Activity",
+      "priority": "Critical",
+      "entities": [
+        "unrecognized login",
+        "foreign country"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Lock account immediately and initiate security review",
+      "response": "We'll lock account immediately and initiate security review. You'll receive an update shortly."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 22,
+    "message": "I got a text asking me to confirm my PIN to 'verify my account' \u2014 is this legit or a scam?",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Inquiry"
+      ],
+      "issue_type": "Phishing Attempt",
+      "priority": "High",
+      "entities": [
+        "SMS phishing",
+        "PIN request"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Advise not to respond, report as phishing, monitor account",
+      "response": "That message matches a known phishing pattern -- we never ask for your PIN via text. Per our Phishing & Social Engineering Response Policy, please don't respond or click any links; we're flagging your account for monitoring for the next 30 days."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs phishing/scam awareness policy content",
+    "kb_reference": "kb-005",
+    "paraphrase_of": null
+  },
+  {
+    "id": 23,
+    "message": "My card is still in my wallet but there are three transactions I don't recognize from this morning.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion"
+      ],
+      "issue_type": "Unauthorized Transactions",
+      "priority": "Critical",
+      "entities": [
+        "3 unrecognized transactions"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Freeze card, reverse pending charges, open fraud case",
+      "response": "We'll freeze card, reverse pending charges, open fraud case. You'll receive an update shortly."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 24,
+    "message": "Someone called claiming to be from the bank and asked for my full card number, I didn't give it but I'm worried.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Security Concern"
+      ],
+      "issue_type": "Vishing Attempt",
+      "priority": "High",
+      "entities": [
+        "phone scam attempt"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Confirm no data was shared, flag account for monitoring",
+      "response": "We'll confirm no data was shared, flag account for monitoring. You'll receive an update shortly."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 25,
+    "message": "I lost my wallet with my debit card in it two hours ago.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Card Issue"
+      ],
+      "issue_type": "Lost/Stolen Card",
+      "priority": "Critical",
+      "entities": [
+        "lost card",
+        "2 hours ago"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Immediately block card and issue replacement",
+      "response": "We'll immediately block card and issue replacement. You'll receive an update shortly."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 26,
+    "message": "There's a new payee added to my bill pay list that I never set up.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion"
+      ],
+      "issue_type": "Unauthorized Account Change",
+      "priority": "Critical",
+      "entities": [
+        "unrecognized payee added"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Remove payee, lock account, investigate access logs",
+      "response": "We'll remove payee, lock account, investigate access logs. You'll receive an update shortly."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 27,
+    "message": "I keep getting emails about password changes I never requested.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Security Concern"
+      ],
+      "issue_type": "Suspicious Account Activity",
+      "priority": "High",
+      "entities": [
+        "unrequested password change emails"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Review account access logs and force password reset",
+      "response": "We'll review account access logs and force password reset. You'll receive an update shortly."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 28,
+    "message": "My credit score dropped and I noticed a credit card account I never opened.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion"
+      ],
+      "issue_type": "Identity Theft",
+      "priority": "Critical",
+      "entities": [
+        "unauthorized credit account",
+        "credit score drop"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Initiate identity theft investigation and credit freeze",
+      "response": "This matches our criteria for suspected identity theft. Per policy, we're opening a Critical-priority case, placing an internal credit freeze, and will provide you a case number and a checklist for reporting to external credit bureaus."
+    },
+    "category": "fraud_suspicion",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs identity theft response policy",
+    "kb_reference": "kb-006",
+    "paraphrase_of": null
+  },
+  {
+    "id": 29,
+    "message": "This is the third time I'm contacting support about the same issue and NOTHING has been fixed!",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Escalation Request"
+      ],
+      "issue_type": "Repeated Unresolved Issue",
+      "priority": "High",
+      "entities": [
+        "3rd contact",
+        "unresolved issue"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Escalate to senior support and review case history",
+      "response": "We'll escalate to senior support and review case history. You'll receive an update shortly."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 30,
+    "message": "I need my account unfrozen right now, I have rent due today and can't access any of my money.",
+    "ground_truth": {
+      "intent": [
+        "Account Issue",
+        "Complaint"
+      ],
+      "issue_type": "Account Freeze - Urgent",
+      "priority": "Critical",
+      "entities": [
+        "frozen account",
+        "rent due today"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Prioritize review of freeze reason and expedite resolution",
+      "response": "We'll prioritize review of freeze reason and expedite resolution. You'll receive an update shortly."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 31,
+    "message": "Your app crashed during my transfer and now I don't know if the money left my account or not.",
+    "ground_truth": {
+      "intent": [
+        "Technical Issue",
+        "Billing Issue"
+      ],
+      "issue_type": "Failed/Uncertain Transaction",
+      "priority": "High",
+      "entities": [
+        "app crash",
+        "transfer status unknown"
+      ],
+      "routing": "Technical Support",
+      "suggested_action": "Verify transaction status in backend logs immediately",
+      "response": "We'll verify transaction status in backend logs immediately. You'll receive an update shortly."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 32,
+    "message": "I am extremely frustrated, this is unacceptable service and I want to speak to a manager immediately.",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Escalation Request"
+      ],
+      "issue_type": "General Service Complaint",
+      "priority": "High",
+      "entities": [
+        "manager escalation request"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Escalate to supervisor and acknowledge frustration",
+      "response": "We'll escalate to supervisor and acknowledge frustration. You'll receive an update shortly."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "No specific issue stated yet, needs clarification",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 33,
+    "message": "My business payroll transfer failed and my employees haven't been paid, this needs to be fixed today.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Failed Business Transfer",
+      "priority": "Critical",
+      "entities": [
+        "failed payroll transfer",
+        "same-day deadline"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Escalate to priority queue and trace failed transfer",
+      "response": "We'll escalate to priority queue and trace failed transfer. You'll receive an update shortly."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 34,
+    "message": "I've been on hold for over an hour and no one has helped me with my locked account.",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Account Access"
+      ],
+      "issue_type": "Service Delay Complaint",
+      "priority": "High",
+      "entities": [
+        "1+ hour hold",
+        "locked account"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Expedite callback and resolve account lock",
+      "response": "We'll expedite callback and resolve account lock. You'll receive an update shortly."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 35,
+    "message": "The wire transfer I sent for my house closing hasn't arrived and closing is in 2 hours!",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Time-Sensitive Wire Transfer",
+      "priority": "Critical",
+      "entities": [
+        "wire transfer",
+        "2 hour deadline",
+        "house closing"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Escalate immediately to wire operations team",
+      "response": "We'll escalate immediately to wire operations team. You'll receive an update shortly."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 36,
+    "message": "I'm beyond upset, your system charged me a late fee even though I set up autopay months ago.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Incorrect Late Fee",
+      "priority": "High",
+      "entities": [
+        "late fee",
+        "autopay enabled"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Verify autopay logs and reverse fee if confirmed",
+      "response": "Per our Billing & Fees Policy, if autopay was active and the payment failed due to a system error, the late fee should be reversed automatically. We're verifying your autopay enrollment date against the payment log now."
+    },
+    "category": "high_urgency",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs autopay/late fee policy",
+    "kb_reference": "kb-001",
+    "paraphrase_of": null
+  },
+  {
+    "id": 37,
+    "message": "I need to update my phone number AND dispute a charge from yesterday.",
+    "ground_truth": {
+      "intent": [
+        "Account Update",
+        "Billing Issue"
+      ],
+      "issue_type": "Combined Request",
+      "priority": "Medium",
+      "entities": [
+        "phone number update",
+        "charge from yesterday"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Update contact info and open separate billing dispute",
+      "response": "We'll update contact info and open separate billing dispute. You'll receive an update shortly."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 38,
+    "message": "Can you tell me my current balance, and also why my last two transfers took so long to process?",
+    "ground_truth": {
+      "intent": [
+        "Inquiry",
+        "Complaint"
+      ],
+      "issue_type": "Balance Inquiry + Delay Complaint",
+      "priority": "Low",
+      "entities": [
+        "balance inquiry",
+        "transfer delay x2"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Provide balance and investigate transfer processing times",
+      "response": "We'll provide balance and investigate transfer processing times. You'll receive an update shortly."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 39,
+    "message": "My card was declined at the store and I also want to know if I'm eligible for a credit limit increase.",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Inquiry"
+      ],
+      "issue_type": "Card Decline + Limit Inquiry",
+      "priority": "Medium",
+      "entities": [
+        "card decline",
+        "credit limit inquiry"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Investigate decline reason and check limit increase eligibility",
+      "response": "Per our Interest & Credit Policy, you're eligible for a credit limit increase if your account is 6+ months old, has no late payments in the last 12 months, and utilization is below 50%. We'll check this alongside investigating the decline."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs credit limit increase eligibility policy",
+    "kb_reference": "kb-003",
+    "paraphrase_of": null
+  },
+  {
+    "id": 40,
+    "message": "I want to close my old checking account and open a new savings account instead.",
+    "ground_truth": {
+      "intent": [
+        "Account Closure",
+        "Account Opening"
+      ],
+      "issue_type": "Account Migration Request",
+      "priority": "Low",
+      "entities": [
+        "close checking",
+        "open savings"
+      ],
+      "routing": "Account Services",
+      "suggested_action": "Process closure and new account opening together",
+      "response": "We'll process closure and new account opening together. You'll receive an update shortly."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 41,
+    "message": "There's a fraudulent charge on my card, and separately I never got the reward points from last month's purchases.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Billing Issue"
+      ],
+      "issue_type": "Fraud + Rewards Discrepancy",
+      "priority": "High",
+      "entities": [
+        "fraudulent charge",
+        "missing reward points"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Open fraud case and forward rewards issue to billing",
+      "response": "We'll open fraud case and forward rewards issue to billing. You'll receive an update shortly."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 42,
+    "message": "I'm traveling next week so I need to set a travel notice, and also check if my card works internationally.",
+    "ground_truth": {
+      "intent": [
+        "Account Update",
+        "Inquiry"
+      ],
+      "issue_type": "Travel Notice + International Usage",
+      "priority": "Low",
+      "entities": [
+        "travel notice",
+        "international usage"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Set travel notice and confirm international card capability",
+      "response": "Per our Foreign Transaction & FX Policy, your card already works internationally by default -- a travel notice isn't required for functionality, but it does help prevent fraud-related declines while you're away. We'll set one up for your trip dates."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs international usage policy",
+    "kb_reference": "kb-002",
+    "paraphrase_of": null
+  },
+  {
+    "id": 43,
+    "message": "Please cancel my recurring subscription payment and explain why I was charged a cancellation fee last time.",
+    "ground_truth": {
+      "intent": [
+        "Account Update",
+        "Billing Issue"
+      ],
+      "issue_type": "Cancellation + Fee Complaint",
+      "priority": "Medium",
+      "entities": [
+        "cancel subscription",
+        "cancellation fee"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Cancel payment and review prior cancellation fee",
+      "response": "Per our Billing & Fees Policy, cancellation fees only apply within the first 90 days of enrollment. We'll check your enrollment date to see whether last time's fee was applied correctly."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": true,
+    "notes": "Needs cancellation fee policy",
+    "kb_reference": "kb-001",
+    "paraphrase_of": null
+  },
+  {
+    "id": 44,
+    "message": "My account got locked after too many login attempts, and I also noticed a charge I don't recognize.",
+    "ground_truth": {
+      "intent": [
+        "Account Access",
+        "Fraud Suspicion"
+      ],
+      "issue_type": "Lockout + Suspicious Charge",
+      "priority": "High",
+      "entities": [
+        "account lockout",
+        "unrecognized charge"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Unlock after verification and investigate the charge",
+      "response": "We'll unlock after verification and investigate the charge. You'll receive an update shortly."
+    },
+    "category": "multi_intent",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 45,
+    "message": "This isn't working.",
+    "ground_truth": {
+      "intent": [],
+      "issue_type": "Unclear",
+      "priority": "Medium",
+      "entities": [],
+      "routing": "Support Team",
+      "suggested_action": "Request clarification on what issue the customer is experiencing",
+      "response": "We'll request clarification on what issue the customer is experiencing. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 46,
+    "message": "Can someone help me with my account?",
+    "ground_truth": {
+      "intent": [
+        "Inquiry"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Low",
+      "entities": [],
+      "routing": "Support Team",
+      "suggested_action": "Ask customer to specify the account issue",
+      "response": "We'll ask customer to specify the account issue. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 47,
+    "message": "It's been a while and still nothing.",
+    "ground_truth": {
+      "intent": [
+        "Complaint"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Medium",
+      "entities": [],
+      "routing": "Support Team",
+      "suggested_action": "Request case reference or details to identify the pending issue",
+      "response": "We'll request case reference or details to identify the pending issue. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 48,
+    "message": "I saw something weird on my statement.",
+    "ground_truth": {
+      "intent": [
+        "Inquiry",
+        "Fraud Suspicion"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Medium",
+      "entities": [
+        "unspecified statement item"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Ask customer to specify the transaction in question",
+      "response": "We'll ask customer to specify the transaction in question. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 49,
+    "message": "Not happy with the service lately.",
+    "ground_truth": {
+      "intent": [
+        "Complaint"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Low",
+      "entities": [],
+      "routing": "Support Team",
+      "suggested_action": "Ask for specific examples of service issues",
+      "response": "We'll ask for specific examples of service issues. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 50,
+    "message": "Payment issue again.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Medium",
+      "entities": [],
+      "routing": "Billing Department",
+      "suggested_action": "Request transaction details or date of the payment issue",
+      "response": "We'll request transaction details or date of the payment issue. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 51,
+    "message": "Is this normal?",
+    "ground_truth": {
+      "intent": [
+        "Inquiry"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Low",
+      "entities": [],
+      "routing": "Support Team",
+      "suggested_action": "Ask what specific activity or charge the customer is referring to",
+      "response": "We'll ask what specific activity or charge the customer is referring to. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 52,
+    "message": "Money's missing.",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Fraud Suspicion"
+      ],
+      "issue_type": "Unclear",
+      "priority": "High",
+      "entities": [
+        "unspecified missing funds"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Request amount, date, and transaction details to investigate",
+      "response": "We'll request amount, date, and transaction details to investigate. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 53,
+    "message": "App won't do the thing.",
+    "ground_truth": {
+      "intent": [
+        "Technical Issue"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Low",
+      "entities": [],
+      "routing": "Technical Support",
+      "suggested_action": "Ask customer to describe the specific app function that failed",
+      "response": "We'll ask customer to describe the specific app function that failed. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 54,
+    "message": "Card declined again lol not sure why.",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Inquiry"
+      ],
+      "issue_type": "Card Decline",
+      "priority": "Medium",
+      "entities": [
+        "card decline"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Request merchant, date, and amount to investigate decline reason",
+      "response": "We'll request merchant, date, and amount to investigate decline reason. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 55,
+    "message": "Hey, question about fees.",
+    "ground_truth": {
+      "intent": [
+        "Inquiry"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Low",
+      "entities": [],
+      "routing": "Support Team",
+      "suggested_action": "Ask which specific fee the customer wants to know about",
+      "response": "Happy to help -- could you tell me which specific fee you're asking about (maintenance, overdraft, late, or cancellation)? Our Billing & Fees Policy covers the criteria for each."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": true,
+    "notes": "Fee schedule likely relevant once clarified",
+    "kb_reference": "kb-001",
+    "paraphrase_of": null
+  },
+  {
+    "id": 56,
+    "message": "Something's off with my last transfer, not sure what exactly.",
+    "ground_truth": {
+      "intent": [
+        "Complaint",
+        "Inquiry"
+      ],
+      "issue_type": "Unclear Transfer Issue",
+      "priority": "Medium",
+      "entities": [
+        "unspecified transfer issue"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Request transfer date, amount, and recipient to investigate",
+      "response": "We'll request transfer date, amount, and recipient to investigate. You'll receive an update shortly."
+    },
+    "category": "ambiguous",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "",
+    "kb_reference": null,
+    "paraphrase_of": null
+  },
+  {
+    "id": 57,
+    "message": "Charged me twice for the exact same purchase, need it fixed ASAP or I'm taking this further.",
+    "ground_truth": {
+      "intent": [
+        "Billing Issue",
+        "Complaint"
+      ],
+      "issue_type": "Duplicate Charge",
+      "priority": "High",
+      "entities": [
+        "duplicate transaction"
+      ],
+      "routing": "Billing Department",
+      "suggested_action": "Escalate and verify transaction logs",
+      "response": "We'll escalate and verify transaction logs. You'll receive an update shortly."
+    },
+    "category": "consistency_test",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "Paraphrase of message 1 -- ground truth should match; used to test output stability across rewordings.",
+    "kb_reference": null,
+    "paraphrase_of": 1
+  },
+  {
+    "id": 58,
+    "message": "Someone swiped my card info -- there's a $60 charge from a gas station in a state I've never been to.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Billing Issue"
+      ],
+      "issue_type": "Unauthorized Transaction",
+      "priority": "Critical",
+      "entities": [
+        "$60 charge",
+        "out-of-state gas station"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Freeze card and open fraud case immediately",
+      "response": "We'll freeze card and open fraud case immediately. You'll receive an update shortly."
+    },
+    "category": "consistency_test",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "Paraphrase of message 6 -- ground truth should match; used to test output stability across rewordings.",
+    "kb_reference": null,
+    "paraphrase_of": 6
+  },
+  {
+    "id": 59,
+    "message": "I'd like to close out my savings account -- what do I need to do?",
+    "ground_truth": {
+      "intent": [
+        "Account Closure"
+      ],
+      "issue_type": "Account Closure Request",
+      "priority": "Low",
+      "entities": [
+        "account closure"
+      ],
+      "routing": "Account Services",
+      "suggested_action": "Provide account closure checklist and confirm identity",
+      "response": "We'll provide account closure checklist and confirm identity. You'll receive an update shortly."
+    },
+    "category": "consistency_test",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "Paraphrase of message 15 -- ground truth should match; used to test output stability across rewordings.",
+    "kb_reference": null,
+    "paraphrase_of": 15
+  },
+  {
+    "id": 60,
+    "message": "Can't get into my online banking at all, password reset isn't fixing it.",
+    "ground_truth": {
+      "intent": [
+        "Fraud Suspicion",
+        "Security Concern"
+      ],
+      "issue_type": "Vishing Attempt",
+      "priority": "High",
+      "entities": [
+        "phone scam attempt"
+      ],
+      "routing": "Fraud Team",
+      "suggested_action": "Confirm no data was shared, flag account for monitoring",
+      "response": "We'll confirm no data was shared, flag account for monitoring. You'll receive an update shortly."
+    },
+    "category": "consistency_test",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "Paraphrase of message 24 -- ground truth should match; used to test output stability across rewordings.",
+    "kb_reference": null,
+    "paraphrase_of": 24
+  },
+  {
+    "id": 61,
+    "message": "This is my third message about the exact same problem and it's still broken.",
+    "ground_truth": {
+      "intent": [
+        "Account Issue",
+        "Complaint"
+      ],
+      "issue_type": "Account Freeze - Urgent",
+      "priority": "Critical",
+      "entities": [
+        "frozen account",
+        "rent due today"
+      ],
+      "routing": "Support Team",
+      "suggested_action": "Prioritize review of freeze reason and expedite resolution",
+      "response": "We'll prioritize review of freeze reason and expedite resolution. You'll receive an update shortly."
+    },
+    "category": "consistency_test",
+    "is_ambiguous": false,
+    "requires_retrieval": false,
+    "notes": "Paraphrase of message 30 -- ground truth should match; used to test output stability across rewordings.",
+    "kb_reference": null,
+    "paraphrase_of": 30
+  },
+  {
+    "id": 62,
+    "message": "Ugh, card got declined AGAIN and I have no idea why.",
+    "ground_truth": {
+      "intent": [
+        "Inquiry"
+      ],
+      "issue_type": "Unclear",
+      "priority": "Low",
+      "entities": [],
+      "routing": "Support Team",
+      "suggested_action": "Ask what specific activity or charge the customer is referring to",
+      "response": "We'll ask what specific activity or charge the customer is referring to. You'll receive an update shortly."
+    },
+    "category": "consistency_test",
+    "is_ambiguous": true,
+    "requires_retrieval": false,
+    "notes": "Paraphrase of message 51 -- ground truth should match; used to test output stability across rewordings.",
+    "kb_reference": null,
+    "paraphrase_of": 51
+  }
+]

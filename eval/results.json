@@ -1,0 +1,988 @@
+{
+  "per_message_results": [
+    {
+      "id": 1,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.667,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "duplicate transaction"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Dispute",
+          "Complaint"
+        ],
+        "issue_type": "Duplicate Charge",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "I understand you were charged twice for the same transaction. According to our Dispute & Refund Resolution Policy, once we verify the duplicate charge against our transaction logs, we will process a refund within 24-48 hours. I\u2019m opening a dispute case for you now and will keep you updated on the verification and refund timeline.",
+        "routing": "Billing Department",
+        "suggested_action": "Open a duplicate charge dispute case, verify transaction logs, and inform the customer of the 24-48 hour refund timeline",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 912.5
+        }
+      }
+    },
+    {
+      "id": 2,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.667,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": false,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "$450 charge",
+          "unknown merchant"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Fraud Suspicion",
+          "Dispute"
+        ],
+        "issue_type": "Unrecognized Charge",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "We see you have a $450 charge on your statement from a merchant you do not recognize. Our team will investigate this transaction, verify its legitimacy, and work to resolve any unauthorized activity. If you have any additional details such as the transaction date or reference number, please let us know so we can expedite the review.",
+        "routing": "Fraud Team",
+        "suggested_action": "Open a fraud investigation case, review transaction logs, and initiate a dispute if the charge is unauthorized.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2001.1
+        }
+      }
+    },
+    {
+      "id": 3,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "$35 overdraft fee",
+          "account balance"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Dispute"
+        ],
+        "issue_type": "Overdraft Fee Dispute",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "According to our Billing & Fees Policy, a $35 overdraft fee is only applied when the account balance drops below $0 after a transaction posts. Since your balance never went negative, this fee appears to have been applied in error and will be reversed once we verify the ledger. We'll review your account activity and process the reversal promptly.",
+        "routing": "Billing Department",
+        "suggested_action": "Verify the account ledger for any negative balance; if none, reverse the $35 overdraft fee and notify the customer.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1179.6
+        }
+      }
+    },
+    {
+      "id": 4,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "refund",
+          "2 weeks",
+          "returned purchase"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Complaint"
+        ],
+        "issue_type": "Refund Delay",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I understand your concern about the refund not posting after two weeks. Our Refund Delays policy states that merchant refunds typically post within 5-10 business days, and if they haven't posted after 10 business days we need to escalate to the merchant acquirer for tracing. I will open a case to investigate the status of your refund and, if necessary, contact the merchant on your behalf to resolve this promptly.",
+        "routing": "Billing Department",
+        "suggested_action": "Open a refund investigation case, verify merchant refund status, and if not posted after 10 business days, escalate to the merchant acquirer for tracing.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1391.5
+        }
+      }
+    },
+    {
+      "id": 5,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "transaction from last month",
+          "receipt"
+        ],
+        "intent": [
+          "Dispute",
+          "Billing Issue"
+        ],
+        "issue_type": "Amount Mismatch",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I understand you\u2019d like to dispute a transaction where the charged amount doesn\u2019t match your receipt. Per our Dispute & Refund Resolution Policy, we\u2019ll need a copy of the receipt or order confirmation to verify the discrepancy and then open a formal dispute case with the merchant on your behalf. Once we have the documentation, we\u2019ll proceed and keep you updated on the progress.",
+        "routing": "Billing Department",
+        "suggested_action": "Request receipt or order confirmation from the customer and open a formal dispute case with the merchant",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1384.6
+        }
+      }
+    },
+    {
+      "id": 6,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "$60 charge",
+          "gas station",
+          "out-of-state transaction"
+        ],
+        "intent": [
+          "Fraud Suspicion",
+          "Dispute"
+        ],
+        "issue_type": "Unauthorized Transaction",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "I\u2019m sorry to hear about this unauthorized charge. Since you did not make the $60 transaction at the gas station, we will immediately freeze your card to prevent further activity, verify the merchant descriptor, and open a fraud case. Provisional credit for the disputed amount will be issued within 10 business days, and we\u2019ll work to reverse the charge. I\u2019ll also arrange for a replacement card if needed.",
+        "routing": "Fraud Team",
+        "suggested_action": "Freeze the card, open a fraud investigation case, verify merchant descriptor, and issue provisional credit",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1388.7
+        }
+      }
+    },
+    {
+      "id": 7,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "monthly subscription",
+          "duplicate charge"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Dispute"
+        ],
+        "issue_type": "Duplicate Charge",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "Thank you for notifying us about the double billing on your monthly subscription. Our Billing & Fees Policy states that billing errors, such as duplicate charges, are corrected after verification of the transaction. I will open a review of your subscription billing and arrange a refund for the extra charge. We will keep you updated on the progress.",
+        "routing": "Billing Department",
+        "suggested_action": "Open a billing dispute, verify the duplicate subscription charge in the ledger, process a refund for the extra amount, and confirm the subscription details with the customer.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 10198.9
+        }
+      }
+    },
+    {
+      "id": 8,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "exchange rate",
+          "international purchase",
+          "foreign transaction fee"
+        ],
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Foreign Transaction Fee Explanation",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "Thank you for reaching out. For international card purchases, we apply the interbank exchange rate plus a standard 2.5% foreign transaction fee, as outlined in our Foreign Transaction & FX Policy. This markup can make the rate you see higher than the market rate. If you\u2019d like, we can review the specific transaction details together.",
+        "routing": "Billing Department",
+        "suggested_action": "Explain the 2.5% markup, verify the transaction details, and address any further questions the customer may have.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9583.1
+        }
+      }
+    },
+    {
+      "id": 9,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "credit card bill",
+          "interest charge"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Dispute"
+        ],
+        "issue_type": "Interest Charged After Full Payment",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "Our Interest & Credit Policy states that interest is not charged on purchases when the full statement balance is paid by the due date shown on the most recent statement. If a payment posts after the due date\u2014even by one day\u2014interest will accrue from the transaction date. I\u2019ll review the posting date of your payment against your statement\u2019s due date to determine why the interest was applied and correct it if necessary.",
+        "routing": "Billing Department",
+        "suggested_action": "Verify the payment posting date against the statement due date and adjust any incorrectly applied interest charges.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9989.1
+        }
+      }
+    },
+    {
+      "id": 10,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide the date the deposit was expected and any reference or transaction ID from your employer?",
+        "entities": [
+          "$200",
+          "paycheck deposit"
+        ],
+        "intent": [
+          "Account Access",
+          "Inquiry"
+        ],
+        "issue_type": "Missing Deposit",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We understand your paycheck deposit appears to be $200 short. To investigate, we\u2019ll need the expected deposit date and any reference information your employer can provide. Once we have those details, we can check the transaction and resolve the issue.",
+        "routing": "Account Services",
+        "suggested_action": "Gather deposit details from the customer and verify the transaction with the payments system.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 10883.3
+        }
+      }
+    },
+    {
+      "id": 11,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "mailing address"
+        ],
+        "intent": [
+          "Account Update"
+        ],
+        "issue_type": "Address Change",
+        "needs_clarification": false,
+        "priority": "Low",
+        "response": "You can update your mailing address by logging into online banking, selecting the 'Profile' or 'Settings' section, and editing your address information. You may also call our customer service line or visit a branch with a valid ID to have the change made. After the update, you will receive a confirmation of the new address on file.",
+        "routing": "Account Services",
+        "suggested_action": "Provide the customer with address update instructions and verify identity if required",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9920.0
+        }
+      }
+    },
+    {
+      "id": 12,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "online banking",
+          "password"
+        ],
+        "intent": [
+          "Account Access"
+        ],
+        "issue_type": "Login Failure",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I'm sorry you're having trouble accessing your online banking. Please make sure you are using the official bank website or app and that you have cleared your browser cache before trying to log in again. If you have received any unexpected messages asking for your password or PIN, do not respond to them and report the message to our Fraud Team, as outlined in our Phishing & Social Engineering Response Policy. If the issue persists after resetting your password, we can verify your account status and reset your credentials securely. Let us know if you suspect any suspicious communications so we can enhance monitoring on your account.",
+        "routing": "Support Team",
+        "suggested_action": "Verify account status, ensure no phishing attempts, guide customer through secure password reset and, if needed, flag account for enhanced monitoring",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 14697.0
+        }
+      }
+    },
+    {
+      "id": 13,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "spouse",
+          "joint account"
+        ],
+        "intent": [
+          "Account Update"
+        ],
+        "issue_type": "Add Joint Account Holder",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "To add your spouse as a joint account holder, our policy requires both you and your spouse to be present\u2014either in person at a branch or via a verified video call\u2014and each provide a government\u2011issued ID. Once both IDs are verified, a new joint account agreement will need to be signed by both parties. After the agreement is completed, the existing account history will be transferred to the joint account.",
+        "routing": "Account Services",
+        "suggested_action": "Schedule a joint verification appointment (in\u2011person or video) and collect government\u2011issued IDs from both parties to complete the joint account agreement.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 5505.0
+        }
+      }
+    },
+    {
+      "id": 14,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "minimum balance",
+          "monthly maintenance fee"
+        ],
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Monthly Maintenance Fee Inquiry",
+        "needs_clarification": false,
+        "priority": "Low",
+        "response": "To avoid the monthly maintenance fee, your account must either maintain a minimum daily balance of $1,500 or receive $500 or more in direct deposits each month, as outlined in our Billing & Fees Policy.",
+        "routing": "Billing Department",
+        "suggested_action": "Provide the customer with the minimum balance and direct deposit criteria and confirm whether their account currently meets either condition.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 8753.1
+        }
+      }
+    },
+    {
+      "id": 15,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "savings account"
+        ],
+        "intent": [
+          "Account Closure"
+        ],
+        "issue_type": "Savings Account Closure Request",
+        "needs_clarification": false,
+        "priority": "Low",
+        "response": "Thank you for contacting us. To close your savings account, we'll need to verify your identity and confirm a few details. Once verified, we will initiate the closure process, provide you with a confirmation, and let you know about any remaining balance handling. Please let us know a convenient time to complete the verification.",
+        "routing": "Account Services",
+        "suggested_action": "Verify customer identity and initiate the savings account closure workflow",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9774.4
+        }
+      }
+    },
+    {
+      "id": 16,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "daily ATM withdrawal limit"
+        ],
+        "intent": [
+          "Account Update",
+          "Inquiry"
+        ],
+        "issue_type": "ATM Withdrawal Limit Increase",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "We can review your request to increase your daily ATM withdrawal limit. Our team will check your account eligibility and let you know the next steps. If you have any recent activity or tier upgrades, that may help expedite the adjustment.",
+        "routing": "Account Services",
+        "suggested_action": "Agent to assess the customer's account eligibility for a higher ATM withdrawal limit and adjust the limit if approved",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 8974.5
+        }
+      }
+    },
+    {
+      "id": 17,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "new debit card",
+          "last week"
+        ],
+        "intent": [
+          "Card Issue",
+          "Inquiry"
+        ],
+        "issue_type": "Card Delivery Issue",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I\u2019m sorry you haven\u2019t received your new debit card yet. I\u2019ll check the shipment status for you and, if needed, arrange for a replacement to be sent. Could you please confirm the mailing address we have on file so we can ensure it\u2019s correct?",
+        "routing": "Account Services",
+        "suggested_action": "Verify card shipment status, confirm mailing address, and initiate re\u2011issuance if the card is confirmed lost in transit.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 10140.9
+        }
+      }
+    },
+    {
+      "id": 18,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "electricity provider"
+        ],
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Automatic Bill Pay Setup",
+        "needs_clarification": false,
+        "priority": "Low",
+        "response": "Thank you for your question. To set up automatic bill pay for your electricity provider, you can log in to your online banking portal, navigate to the 'Payments' or 'Bill Pay' section, add your electricity provider as a new payee using the account number on your bill, and then select the option to make the payment recurring on your preferred schedule. If you need step\u2011by\u2011step assistance, please let us know and we\u2019ll be happy to guide you through the process.",
+        "routing": "Account Services",
+        "suggested_action": "Provide step\u2011by\u2011step instructions for setting up automatic bill pay or connect the customer with the Bill Pay support team.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 7375.6
+        }
+      }
+    },
+    {
+      "id": 19,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "marriage",
+          "name change",
+          "account",
+          "cards"
+        ],
+        "intent": [
+          "Account Update"
+        ],
+        "issue_type": "Name Change",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "We can update the name on your account and issue new cards once we receive the required legal documentation, such as your marriage certificate, court order, or an updated government ID, as outlined in our Name Changes policy.",
+        "routing": "Account Services",
+        "suggested_action": "Request the appropriate legal documentation (e.g., marriage certificate) and process the name change on the account and reissue cards per policy.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 5842.7
+        }
+      }
+    },
+    {
+      "id": 20,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "premium tier",
+          "lower fees"
+        ],
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Premium Tier Eligibility",
+        "needs_clarification": false,
+        "priority": "Low",
+        "response": "Based on our Premium Tier Upgrade policy, an account is eligible for the premium tier (which waives most standard fees) if it either maintains an average balance of $10,000 or more over the trailing three months, or receives $2,000 or more in qualifying direct deposits each month. If your account meets either of these criteria, you qualify for the upgrade. We can review your recent balances and deposit history to confirm your eligibility.",
+        "routing": "Account Services",
+        "suggested_action": "Check the customer's average balance over the past three months and monthly direct deposit amounts to determine eligibility for the premium tier upgrade.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 3490.9
+        }
+      }
+    },
+    {
+      "id": 21,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "login attempts",
+          "foreign country"
+        ],
+        "intent": [
+          "Security Concern",
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Unauthorized Access",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "We understand your concern about possible unauthorized access to your account. Our security team will review the recent login attempts from the unfamiliar location, temporarily secure your account, and guide you through resetting your credentials. We will contact you shortly to verify your identity and ensure your account remains protected.",
+        "routing": "Fraud Team",
+        "suggested_action": "Initiate security investigation, lock account if needed, and arrange password reset",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 12549.6
+        }
+      }
+    },
+    {
+      "id": 22,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "PIN",
+          "text message",
+          "verify my account"
+        ],
+        "intent": [
+          "Fraud Suspicion",
+          "Security Concern"
+        ],
+        "issue_type": "Phishing Attempt",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "Our bank never asks you to confirm your PIN, full card number, or online banking password via text, email, or unsolicited phone call. The message you received is likely a phishing attempt. Please do not click any links or reply to the text. Forward the suspicious message to our Fraud Team for investigation, and we will monitor your account closely for the next 30 days. If you have already shared any sensitive information, we will flag your account for enhanced monitoring and reset your credentials immediately.",
+        "routing": "Fraud Team",
+        "suggested_action": "Create a phishing incident case, forward the customer's message to the Fraud Team, advise the customer to monitor the account for 30 days, and reset credentials if any data was disclosed.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 5307.9
+        }
+      }
+    },
+    {
+      "id": 23,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Would you like us to freeze your card and open a fraud case for these unrecognized transactions?",
+        "entities": [
+          "card",
+          "three transactions",
+          "this morning"
+        ],
+        "intent": [
+          "Fraud Suspicion",
+          "Dispute"
+        ],
+        "issue_type": "Unauthorized Transactions",
+        "needs_clarification": true,
+        "priority": "High",
+        "response": "We understand you see three transactions this morning that you don't recognize. Per our Fraud & Unauthorized Transaction Policy, if you confirm these were not made by you, we will freeze your card immediately, reverse the charges provisionally, and open a fraud investigation. Provisional credit will be issued within 10 business days once the case is reviewed.",
+        "routing": "Fraud Team",
+        "suggested_action": "Ask the customer to confirm they want the card frozen and a fraud case opened; then verify merchant descriptors and proceed per policy.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9944.2
+        }
+      }
+    },
+    {
+      "id": 24,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "full card number",
+          "phone call"
+        ],
+        "intent": [
+          "Security Concern",
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Vishing Attempt",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "The call you received is a phishing (vishing) attempt. Our bank never asks for your PIN, full card number, or online banking password over the phone. Since you did not share any information, we will flag your account for enhanced monitoring and reset any credentials if needed. Please continue to monitor your account for the next 30 days and report any suspicious activity immediately.",
+        "routing": "Fraud Team",
+        "suggested_action": "Create a fraud incident record, flag the account for enhanced monitoring, confirm no sensitive data was disclosed, and advise the customer to monitor the account for 30 days.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 13701.8
+        }
+      }
+    },
+    {
+      "id": 25,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "wallet",
+          "debit card"
+        ],
+        "intent": [
+          "Card Issue",
+          "Security Concern"
+        ],
+        "issue_type": "Lost Card",
+        "needs_clarification": false,
+        "priority": "Critical",
+        "response": "I'm sorry to hear you've lost your wallet. We'll block your debit card right away, as required by our Lost or Stolen Cards policy, and start a replacement card order, which typically arrives in 5\u20117 business days (expedited shipping is available if you need it sooner).",
+        "routing": "Fraud Team",
+        "suggested_action": "Block the debit card immediately, open a fraud case, and initiate replacement card issuance (standard 5-7 business days, expedited if requested).",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 5182.5
+        }
+      }
+    },
+    {
+      "id": 26,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "new payee",
+          "bill pay list"
+        ],
+        "intent": [
+          "Security Concern",
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Unauthorized Payee Addition",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "We understand you see a payee you didn\u2019t add to your bill\u2011pay list. For your security, we\u2019ll review the account, verify your identity, remove any unauthorized payee, and investigate this activity. Our fraud team will keep you informed of the next steps.",
+        "routing": "Fraud Team",
+        "suggested_action": "Verify account ownership, remove the unauthorized payee, and initiate a fraud investigation on the bill\u2011pay activity.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 10918.3
+        }
+      }
+    },
+    {
+      "id": 27,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "password change emails"
+        ],
+        "intent": [
+          "Security Concern",
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Phishing Email Attempt",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "Our bank never requests password confirmations or personal details via email. Please do not click any links or reply to those messages. Forward the suspicious emails to us so we can investigate. We will flag your account for enhanced monitoring and reset your online banking credentials immediately. Continue to monitor your account over the next 30 days for any unusual activity.",
+        "routing": "Fraud Team",
+        "suggested_action": "Report the phishing emails, flag account for enhanced monitoring, and reset customer credentials",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 10391.0
+        }
+      }
+    },
+    {
+      "id": 28,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": false,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "credit score drop",
+          "unauthorized credit card account"
+        ],
+        "intent": [
+          "Fraud Suspicion",
+          "Security Concern"
+        ],
+        "issue_type": "Unauthorized Account Opening",
+        "needs_clarification": false,
+        "priority": "Critical",
+        "response": "We understand your concern about an unfamiliar credit card account and the impact on your credit score. Per our Fraud & Unauthorized Transaction Policy, when a customer reports an account or transaction they did not authorize, we immediately freeze the card, provisionally reverse any related charges, and open a fraud investigation. We'll begin this process right away and keep you updated on the status of the case and any steps needed to protect your credit.",
+        "routing": "Fraud Team",
+        "suggested_action": "Freeze the suspected card/account, open a fraud case, verify customer identity, and initiate credit monitoring as needed.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 10398.2
+        }
+      }
+    },
+    {
+      "id": 29,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide details about the issue you are experiencing, including any reference numbers, dates, or account information?",
+        "entities": [],
+        "intent": [
+          "Complaint",
+          "Escalation Request"
+        ],
+        "issue_type": "Unresolved Issue",
+        "needs_clarification": true,
+        "priority": "High",
+        "response": "We\u2019re sorry you\u2019ve had to contact us multiple times without a resolution. To help us address this promptly, could you please share more details about the issue, such as any reference numbers or dates?",
+        "routing": "Support Team",
+        "suggested_action": "Gather detailed information about the customer's issue and escalate to a senior support representative.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 3547.4
+        }
+      }
+    },
+    {
+      "id": 30,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "rent due today"
+        ],
+        "intent": [
+          "Account Access",
+          "Escalation Request"
+        ],
+        "issue_type": "Account Frozen",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "We understand that your account is currently frozen and that you need access to your funds for rent today. We will promptly review the freeze on your account and work to lift it so you can access your money. To complete this, please confirm your identity by providing the requested verification details.",
+        "routing": "Account Services",
+        "suggested_action": "Verify customer identity, review the reason for the account freeze, and lift the freeze if permissible; prioritize due to urgent rent payment.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 7119.2
+        }
+      }
+    },
+    {
+      "id": 48,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide the date, amount, and description of the transaction you find unusual on your statement?",
+        "entities": [],
+        "intent": [
+          "Billing Issue",
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Unrecognized Transaction",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We understand that something on your statement looks unusual. To help us investigate whether this is a billing error or a potential fraud concern, could you share the date, amount, and description of the transaction in question?",
+        "routing": "Support Team",
+        "suggested_action": "Gather detailed transaction information from the customer to determine the appropriate department (Billing or Fraud) for further investigation.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 6501.1
+        }
+      }
+    },
+    {
+      "id": 31,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide the date, amount, and recipient of the transfer you attempted?",
+        "entities": [
+          "transfer",
+          "app crash"
+        ],
+        "intent": [
+          "Technical Issue",
+          "Inquiry"
+        ],
+        "issue_type": "Transfer Status Uncertain",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We\u2019re sorry the app crashed while you were trying to make a transfer. To check whether the money was sent, could you share the date, amount, and recipient of the transfer?",
+        "routing": "Technical Support",
+        "suggested_action": "Obtain transaction details from the customer and verify transfer status in the system",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1580.0
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "consistency_results": [],
+  "total_messages": 62,
+  "successful_runs": 32,
+  "failed_runs": 0
+}

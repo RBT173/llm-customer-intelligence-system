@@ -1,0 +1,1058 @@
+{
+  "per_message_results": [
+    {
+      "id": 1,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Billing Issue",
+          "Complaint"
+        ],
+        "issue_type": "Duplicate Charge",
+        "priority": "High",
+        "entities": [
+          "duplicate transaction"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Open dispute case, verify transaction logs, initiate refund within 24-48 hours",
+        "response": "Based on our Dispute & Refund Resolution Policy, verified duplicate transactions are refunded within 24\u201148 hours once confirmed against transaction logs. We're opening a case now and will process the refund within that timeframe. If you have any supporting documents, please share them.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1498.8
+        }
+      }
+    },
+    {
+      "id": 3,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "intent": [
+          "Billing Issue",
+          "Dispute"
+        ],
+        "issue_type": "Overdraft Fee Dispute",
+        "priority": "Medium",
+        "entities": [
+          "$35 overdraft fee",
+          "balance"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Review the account ledger to confirm the balance never went negative and reverse the fee if it was applied in error",
+        "response": "According to our Billing & Fees Policy, a $35 overdraft fee is only charged when the account balance falls below $0 after a transaction posts. Since your balance never went negative, this fee appears to be an error and will be reversed once we verify the ledger. We are opening a review now.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 3331.7
+        }
+      }
+    },
+    {
+      "id": 5,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Dispute",
+          "Billing Issue"
+        ],
+        "issue_type": "Amount Mismatch",
+        "priority": "Medium",
+        "entities": [
+          "transaction",
+          "receipt",
+          "last month"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Request the customer's receipt or order confirmation, open a formal dispute case with the merchant, and inform the customer of the dispute timeline",
+        "response": "According to our Dispute & Refund Resolution Policy, when a charged amount does not match your receipt we will ask you to provide the receipt or order confirmation and then open a formal dispute case with the merchant. We will keep you updated on the progress of the dispute.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 3541.6
+        }
+      }
+    },
+    {
+      "id": 7,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Billing Issue"
+        ],
+        "issue_type": "Duplicate Charge",
+        "priority": "High",
+        "entities": [
+          "monthly subscription",
+          "duplicate charge"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Open a dispute case, verify transaction logs, and reverse the duplicate charge",
+        "response": "Based on our Billing & Fees Policy, fees applied in error must be reversed after verification. We will review your monthly subscription billing for this cycle, confirm the duplicate charge, and issue a refund accordingly.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9681.6
+        }
+      }
+    },
+    {
+      "id": 9,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "intent": [
+          "Billing Issue"
+        ],
+        "issue_type": "Interest Charge Dispute",
+        "priority": "Medium",
+        "entities": [
+          "credit card bill",
+          "interest charge"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Verify the payment posting date against the statement due date and, if the payment was posted after the due date, explain the interest accrual per policy; if posted on time, adjust the interest charge.",
+        "response": "According to our Interest & Credit Policy, interest is not charged when the full statement balance is paid by the due date shown on the most recent statement. If a payment posts after the due date\u2014even by one day\u2014interest begins accruing from the transaction date. We will check the posting date of your payment and correct any interest charge if it was posted on time.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 16544.8
+        }
+      }
+    },
+    {
+      "id": 11,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Account Update"
+        ],
+        "issue_type": "Mailing Address Change",
+        "priority": "Low",
+        "entities": [
+          "mailing address"
+        ],
+        "routing": "Account Services",
+        "suggested_action": "Provide step-by-step instructions for updating mailing address via online portal or phone support",
+        "response": "You can update your mailing address by logging into online banking, selecting \"Profile\" > \"Personal Details\", and editing the address field. Alternatively, you may call our customer service line at 1\u2011800\u2011XXX\u2011XXXX to have a representative update it for you.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 6817.2
+        }
+      }
+    },
+    {
+      "id": 14,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Monthly Maintenance Fee",
+        "priority": "Low",
+        "entities": [
+          "minimum balance",
+          "monthly maintenance fee"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Provide fee waiver criteria and answer the customer\u2019s question",
+        "response": "According to our Billing & Fees Policy, the monthly maintenance fee is waived when you maintain a minimum daily balance of $1,500, or if you receive $500 or more in direct deposits each month. If either condition is met, the fee will not be applied.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 16340.6
+        }
+      }
+    },
+    {
+      "id": 15,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Account Closure"
+        ],
+        "issue_type": "Account Closure Request",
+        "priority": "Medium",
+        "entities": [
+          "savings account"
+        ],
+        "routing": "Account Services",
+        "suggested_action": "Verify customer identity, confirm closure request, and initiate account closure process per policy",
+        "response": "We can help you close your savings account. Please confirm your identity and we will guide you through the required steps to complete the closure.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 13473.2
+        }
+      }
+    },
+    {
+      "id": 19,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Account Update"
+        ],
+        "issue_type": "Name Change",
+        "priority": "Low",
+        "entities": [
+          "marriage certificate",
+          "account",
+          "cards"
+        ],
+        "routing": "Account Services",
+        "suggested_action": "Collect legal documentation (marriage certificate, court order, or updated government ID) and process the name change request",
+        "response": "According to our Account Services Policy, we can update the name on your account and reissue cards once we receive legal documentation such as your marriage certificate, a court order, or an updated government ID. Please submit a copy of the required document through our secure portal or at a branch, and we will verify it and complete the name change for you.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 12757.4
+        }
+      }
+    },
+    {
+      "id": 20,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Premium Tier Eligibility",
+        "priority": "Low",
+        "entities": [
+          "premium tier upgrade"
+        ],
+        "routing": "Account Services",
+        "suggested_action": "Verify the account's average balance over the past three months and monthly qualifying direct deposits against the Premium Tier Upgrade criteria",
+        "response": "According to our Premium Tier Upgrade policy, an account qualifies for the upgrade if it maintains an average balance of $10,000 or more over the trailing three months, or receives $2,000 or more in qualifying direct deposits each month. If your account meets either of these thresholds, you are eligible for the premium tier, which waives most standard fees.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 23817.8
+        }
+      }
+    },
+    {
+      "id": 21,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Security Concern",
+          "Account Access"
+        ],
+        "issue_type": "Unauthorized Access",
+        "priority": "Critical",
+        "entities": [
+          "login attempts",
+          "foreign country"
+        ],
+        "routing": "Fraud Team",
+        "suggested_action": "Temporarily secure the account, verify the customer's identity, and investigate the suspicious login activity",
+        "response": "We\u2019ve received your report of suspicious login attempts from an unfamiliar country. Our security team will review the activity, temporarily protect your account, and contact you to verify your identity. Please refrain from sharing personal information in any unsolicited communications.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 23404.1
+        }
+      }
+    },
+    {
+      "id": 22,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "intent": [
+          "Security Concern",
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Phishing Attempt",
+        "priority": "Medium",
+        "entities": [
+          "PIN verification text",
+          "SMS"
+        ],
+        "routing": "Fraud Team",
+        "suggested_action": "Advise the customer not to respond or click any links, report the message to the Fraud Team, monitor the account for the next 30 days, and if any sensitive information was shared, flag the account for enhanced monitoring and reset credentials immediately",
+        "response": "Our Phishing & Social Engineering Response Policy states that the bank never asks customers to confirm a PIN, full card number, or online banking password via text, email, or unsolicited phone call. Any such request should be treated as fraudulent. Please do not reply to the message or click any links. Report the text to our Fraud Team, and monitor your account for any unusual activity over the next 30 days. If you have already shared any sensitive information, we will flag your account for enhanced monitoring and reset your credentials right away.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 13986.2
+        }
+      }
+    },
+    {
+      "id": 23,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Fraud Suspicion",
+          "Dispute"
+        ],
+        "issue_type": "Unauthorized Transaction",
+        "priority": "High",
+        "entities": [
+          "card",
+          "three unrecognized transactions"
+        ],
+        "routing": "Fraud Team",
+        "suggested_action": "Verify merchant descriptor data, freeze the card immediately, open a fraud case, and issue provisional credit per dispute timelines",
+        "response": "We will check the merchant details for the three charges you do not recognize. Since you confirm you did not make these transactions, we will freeze your card right away, open a fraud investigation, and provide a provisional credit within 10 business days as outlined in our Fraud & Unauthorized Transaction Policy.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 15624.2
+        }
+      }
+    },
+    {
+      "id": 24,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Fraud Suspicion",
+          "Security Concern"
+        ],
+        "issue_type": "Vishing Attempt",
+        "priority": "High",
+        "entities": [
+          "full card number",
+          "unsolicited phone call"
+        ],
+        "routing": "Fraud Team",
+        "suggested_action": "Report the call to the Fraud Team, flag the account for enhanced monitoring, and reset any credentials if sensitive data was disclosed. Advise the customer to monitor the account for the next 30 days.",
+        "response": "Our Phishing & Social Engineering Response Policy states the bank never asks for a PIN, full card number, or online banking password via an unsolicited phone call. This call is a fraudulent vishing attempt. Please report it to our Fraud Team; we will place an enhanced monitoring flag on your account and reset any credentials if needed. Continue to monitor your account for the next 30 days for any unauthorized activity.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 22587.3
+        }
+      }
+    },
+    {
+      "id": 27,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Security Concern",
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Phishing Email",
+        "priority": "High",
+        "entities": [
+          "password change email",
+          "phishing"
+        ],
+        "routing": "Fraud Team",
+        "suggested_action": "Ask customer to forward the suspicious email, flag the account for enhanced monitoring, reset login credentials immediately, and monitor activity for 30 days",
+        "response": "Our Phishing & Social Engineering Response Policy advises you not to click any links or reply to these messages. Please forward the email to our Fraud Team so we can investigate. We will flag your account for enhanced monitoring and reset your online banking password right away. Continue to watch your account for any unusual activity over the next 30 days.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 8761.9
+        }
+      }
+    },
+    {
+      "id": 30,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Account Access",
+          "Escalation Request"
+        ],
+        "issue_type": "Frozen Account",
+        "priority": "High",
+        "entities": [
+          "account",
+          "rent"
+        ],
+        "routing": "Account Services",
+        "suggested_action": "Verify the reason for the freeze, lift the hold promptly, and prioritize due to urgent rent payment",
+        "response": "We understand your account is currently frozen and you need access urgently for rent. Our team will review the freeze and work to lift it immediately. Please hold while we verify the account status.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9583.3
+        }
+      }
+    },
+    {
+      "id": 32,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Complaint",
+          "Escalation Request"
+        ],
+        "issue_type": "Customer Service Complaint",
+        "priority": "High",
+        "entities": [],
+        "routing": "Support Team",
+        "suggested_action": "Escalate the case to a manager and flag as high priority for immediate follow\u2011up",
+        "response": "We\u2019re sorry for the inconvenience you\u2019ve experienced. I\u2019m escalating this to a manager right away and will ensure they contact you as soon as possible.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 12244.0
+        }
+      }
+    },
+    {
+      "id": 34,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Account Access"
+        ],
+        "issue_type": "Locked Account",
+        "priority": "Medium",
+        "entities": [
+          "locked account"
+        ],
+        "routing": "Support Team",
+        "suggested_action": "Verify the customer's identity, unlock the account, and ensure the request is prioritized to reduce wait times",
+        "response": "We apologize for the long hold time and understand the frustration caused by your locked account. Our team will verify your identity and work to unlock your account as quickly as possible. Thank you for your patience.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 13367.3
+        }
+      }
+    },
+    {
+      "id": 36,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "intent": [
+          "Billing Issue",
+          "Dispute"
+        ],
+        "issue_type": "Late Fee Charged Incorrectly",
+        "priority": "Medium",
+        "entities": [
+          "late fee",
+          "autopay"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Verify autopay enrollment date and payment logs, then reverse the fee if it was applied due to a system error",
+        "response": "According to our Late Fees & Autopay policy, when autopay is active and a late fee is charged because of a system error, the fee must be reversed after we verify the enrollment date and payment log. We\u2019ll review your account and correct the fee if it was applied in error.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 14909.0
+        }
+      }
+    },
+    {
+      "id": 40,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Account Closure",
+          "Account Opening"
+        ],
+        "issue_type": "Account Management",
+        "priority": "Low",
+        "entities": [
+          "checking account",
+          "savings account"
+        ],
+        "routing": "Account Services",
+        "suggested_action": "Process closure of the checking account and initiate opening of a new savings account",
+        "response": "We can help you close your old checking account and open a new savings account. Please confirm the checking account number and let us know if you\u2019d like any remaining balance transferred to the new account.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 15565.0
+        }
+      }
+    },
+    {
+      "id": 43,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.667,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "intent": [
+          "Account Update",
+          "Billing Issue",
+          "Inquiry"
+        ],
+        "issue_type": "Subscription Cancellation",
+        "priority": "Medium",
+        "entities": [
+          "recurring subscription",
+          "cancellation fee"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Cancel the recurring subscription and verify whether the cancellation fee was applied according to the 90\u2011day policy; provide the customer with an explanation of the fee determination",
+        "response": "Our Cancellation Fees policy states that a fee is only charged if a subscription is cancelled within the first 90 days of enrollment. We will review the enrollment date of your subscription, cancel the recurring payment, and let you know why the fee was applied or if it should be reversed.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 15726.6
+        }
+      }
+    },
+    {
+      "id": 45,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Technical Issue"
+        ],
+        "issue_type": "General",
+        "priority": "Low",
+        "entities": [],
+        "routing": "Technical Support",
+        "suggested_action": "Gather more details from the customer",
+        "response": "We\u2019re sorry you\u2019re experiencing an issue. Could you please provide more details about what isn\u2019t working?",
+        "needs_clarification": true,
+        "clarifying_question": "Could you describe the specific problem you\u2019re encountering?",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9888.7
+        }
+      }
+    },
+    {
+      "id": 47,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Unclear Request",
+        "priority": "Low",
+        "entities": [],
+        "routing": "Support Team",
+        "suggested_action": "Gather more information from the customer",
+        "response": "We understand you\u2019re waiting for an update. Could you please provide more details about the request you\u2019re referring to so we can assist you promptly?",
+        "needs_clarification": true,
+        "clarifying_question": "Could you let us know which request or issue you are referring to (e.g., a refund, a service request, or a support ticket)?",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 3846.5
+        }
+      }
+    },
+    {
+      "id": 49,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Complaint"
+        ],
+        "issue_type": "General Dissatisfaction",
+        "priority": "Low",
+        "entities": [],
+        "routing": "Support Team",
+        "suggested_action": "Request additional details to identify the specific issue",
+        "response": "We\u2019re sorry to hear you\u2019re not satisfied with our service. Could you please share more details about the problem you\u2019re experiencing so we can assist you further?",
+        "needs_clarification": true,
+        "clarifying_question": "Could you please provide more details about the specific service issue you are experiencing?",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 8249.6
+        }
+      }
+    },
+    {
+      "id": 53,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Technical Issue"
+        ],
+        "issue_type": "App Not Responding",
+        "priority": "Low",
+        "entities": [
+          "app"
+        ],
+        "routing": "Technical Support",
+        "suggested_action": "Gather more details about the specific app feature and any error messages before proceeding",
+        "response": "I'm sorry you're experiencing trouble with the app. Could you please let us know which specific feature or action isn\u2019t working and if you see any error messages? This will help us resolve the issue more quickly.",
+        "needs_clarification": true,
+        "clarifying_question": "Which feature or action in the app is not working, and are there any error messages displayed?",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1562.0
+        }
+      }
+    },
+    {
+      "id": 54,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Card Issue"
+        ],
+        "issue_type": "Card Decline",
+        "priority": "Medium",
+        "entities": [
+          "card"
+        ],
+        "routing": "Support Team",
+        "suggested_action": "Gather transaction details (date, amount, merchant) and verify card status before proceeding",
+        "response": "I'm sorry to hear your card was declined. I can help investigate the cause once I have a few more details.",
+        "needs_clarification": true,
+        "clarifying_question": "Could you please provide the date, amount, and merchant where the card was declined?",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 6451.2
+        }
+      }
+    },
+    {
+      "id": 57,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Billing Issue",
+          "Complaint"
+        ],
+        "issue_type": "Duplicate Charge",
+        "priority": "High",
+        "entities": [
+          "duplicate transaction",
+          "purchase"
+        ],
+        "routing": "Billing Department",
+        "suggested_action": "Open a dispute case to investigate the duplicate charge and keep the customer updated on the resolution timeline",
+        "response": "We understand you were charged twice for the same purchase and apologize for the inconvenience. Our team will open a dispute case to review the transactions and work to resolve the issue as quickly as possible. We will keep you informed of the progress.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1899.5
+        }
+      }
+    },
+    {
+      "id": 58,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Fraud Suspicion",
+          "Card Issue"
+        ],
+        "issue_type": "Unauthorized Transaction",
+        "priority": "Critical",
+        "entities": [
+          "$60 charge",
+          "gas station",
+          "unauthorized transaction",
+          "card info compromised"
+        ],
+        "routing": "Fraud Team",
+        "suggested_action": "Freeze the card immediately, open a fraud case, and initiate provisional credit for the $60 charge while investigating.",
+        "response": "According to our Fraud & Unauthorized Transaction Policy, because you did not make this $60 charge, we have frozen your card right away, opened a fraud investigation, and will provisionally credit the amount within 10 business days while we verify the merchant details.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 13260.3
+        }
+      }
+    },
+    {
+      "id": 59,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Account Closure"
+        ],
+        "issue_type": "Account Closure Request",
+        "priority": "Low",
+        "entities": [
+          "savings account"
+        ],
+        "routing": "Account Services",
+        "suggested_action": "Collect required identification and account details, then guide the customer through the closure steps",
+        "response": "We can help you close your savings account. Please provide a photo ID and confirm the account number, and we\u2019ll walk you through the necessary steps.",
+        "needs_clarification": false,
+        "clarifying_question": "",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 9482.3
+        }
+      }
+    },
+    {
+      "id": 61,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "intent": [
+          "Complaint",
+          "Technical Issue"
+        ],
+        "issue_type": "Unresolved Issue",
+        "priority": "High",
+        "entities": [],
+        "routing": "Technical Support",
+        "suggested_action": "Collect detailed information about the problem and forward to Technical Support for resolution",
+        "response": "We\u2019re sorry you\u2019re still experiencing this issue. I\u2019ll gather more details so we can resolve it promptly.",
+        "needs_clarification": true,
+        "clarifying_question": "Could you please describe the specific issue you are experiencing and any error messages you see?",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 12734.2
+        }
+      }
+    }
+  ],
+  "failures": [
+    {
+      "id": 2,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Fraud Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 4,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Refund Issue' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 6,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Card Security' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 8,
+      "error": "Model output failed schema validation after retry: Schema violation: 'FX Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 10,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Missing Deposit' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 12,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Password Reset Issue' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 13,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Joint Account Request' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 16,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Limit Increase' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 17,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Card Delivery' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 18,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Bill Pay Setup' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 25,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Lost Card' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 26,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Payee Management' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 28,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Fraud Department' is not one of ['Fraud Team', 'Billing Department', 'Support Team', 'Account Services', 'Technical Support']"
+    },
+    {
+      "id": 29,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Support Request' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 31,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Transfer Issue' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 33,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Payroll Issue' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 35,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Urgent Transfer' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 37,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Dispute Charge' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 38,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Transfer Delay' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 39,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Credit Limit Increase Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 41,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Rewards Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 42,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Card Usage Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 44,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Unrecognized Charge' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 46,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Account Assistance' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 48,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Statement Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 50,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Payment Issue' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 51,
+      "error": "Model output failed schema validation after retry: Schema violation: 'General Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 52,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Customer Service' is not one of ['Fraud Team', 'Billing Department', 'Support Team', 'Account Services', 'Technical Support']"
+    },
+    {
+      "id": 55,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Fee Inquiry' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 56,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Transfer Issue' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 60,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Password Reset Failure' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    },
+    {
+      "id": 62,
+      "error": "Model output failed schema validation after retry: Schema violation: 'Card Decline' is not one of ['Billing Issue', 'Complaint', 'Dispute', 'Fraud Suspicion', 'Security Concern', 'Account Update', 'Account Access', 'Account Closure', 'Account Opening', 'Card Issue', 'Technical Issue', 'Escalation Request', 'Inquiry']"
+    }
+  ],
+  "consistency_results": [
+    {
+      "original_id": 1,
+      "paraphrase_id": 57,
+      "priority_stable": true,
+      "routing_stable": true,
+      "intent_jaccard": 1.0
+    },
+    {
+      "original_id": 15,
+      "paraphrase_id": 59,
+      "priority_stable": false,
+      "routing_stable": true,
+      "intent_jaccard": 1.0
+    },
+    {
+      "original_id": 30,
+      "paraphrase_id": 61,
+      "priority_stable": true,
+      "routing_stable": false,
+      "intent_jaccard": 0.0
+    }
+  ],
+  "total_messages": 62,
+  "successful_runs": 30,
+  "failed_runs": 32
+}
