@@ -1,4 +1,4 @@
-"""
+﻿"""
 Input Layer / API Layer.
 
 Exposes POST /process-customer-message per Section 11 (Optional Production
@@ -14,6 +14,7 @@ Then:
 """
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from .engine import process_message, EngineError
@@ -26,6 +27,17 @@ app = FastAPI(
     title="LLM-Based Customer Intelligence System",
     description="Processes customer messages into structured, actionable intelligence.",
     version="0.1.0",
+)
+
+# Permissive CORS so the standalone frontend (frontend/index.html, opened
+# locally or hosted anywhere) can call this API directly from the browser.
+# Fine for an internal/demo tool; a real production deployment would
+# restrict allow_origins to the actual frontend's domain.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
@@ -67,3 +79,4 @@ def process_customer_message(req: CustomerMessageRequest):
 
     result.pop("_meta", None)
     return result
+
