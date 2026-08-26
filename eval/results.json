@@ -978,11 +978,945 @@
           "latency_ms": 1580.0
         }
       }
+    },
+    {
+      "id": 32,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "manager"
+        ],
+        "intent": [
+          "Complaint",
+          "Escalation Request"
+        ],
+        "issue_type": "Service Complaint",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "We\u2019re sorry to hear about your experience. I\u2019ll arrange for a manager to contact you as soon as possible.",
+        "routing": "Support Team",
+        "suggested_action": "Escalate the case to a manager and gather any additional details about the service issue.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1397.9
+        }
+      }
+    },
+    {
+      "id": 33,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "payroll transfer",
+          "employees"
+        ],
+        "intent": [
+          "Technical Issue"
+        ],
+        "issue_type": "Payroll Transfer Failure",
+        "needs_clarification": false,
+        "priority": "Critical",
+        "response": "We understand that your business payroll transfer failed and your employees have not been paid. We are escalating this to our technical team immediately to investigate and resolve the issue today.",
+        "routing": "Technical Support",
+        "suggested_action": "Escalate to technical support to investigate the failed payroll transfer and initiate corrective action today",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1849.5
+        }
+      }
+    },
+    {
+      "id": 34,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "locked account",
+          "hold time"
+        ],
+        "intent": [
+          "Account Access",
+          "Complaint"
+        ],
+        "issue_type": "Locked Account",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "We\u2019re sorry you\u2019ve been waiting so long. I understand your account is locked and you haven\u2019t received assistance yet. I\u2019ll prioritize unlocking your account and will have a team member reach out to you promptly to resolve this. Thank you for your patience.",
+        "routing": "Support Team",
+        "suggested_action": "Verify customer identity, unlock the account, and follow up with the customer regarding resolution; note the extended hold time for possible escalation.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1472.5
+        }
+      }
+    },
+    {
+      "id": 35,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "wire transfer",
+          "house closing",
+          "2 hours"
+        ],
+        "intent": [
+          "Technical Issue",
+          "Escalation Request"
+        ],
+        "issue_type": "Wire Transfer Delay",
+        "needs_clarification": false,
+        "priority": "Critical",
+        "response": "We understand how important this wire transfer is for your closing. We are escalating this immediately to investigate the status of the transfer and will work to ensure it is processed as quickly as possible. Our team will keep you updated on the progress.",
+        "routing": "Support Team",
+        "suggested_action": "Escalate the wire transfer inquiry, verify transaction details, and coordinate with the payments team to expedite processing.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1687.4
+        }
+      }
+    },
+    {
+      "id": 36,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "late fee",
+          "autopay"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Complaint"
+        ],
+        "issue_type": "Late Fee Charged",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I\u2019m sorry you were charged a late fee despite having autopay set up. According to our Late Fees & Autopay policy, if autopay is active and a fee was applied because of a system error, the fee should be reversed. I\u2019ll review your autopay enrollment date and payment history to confirm the error and process a reversal if appropriate. Could you please confirm the date you enrolled in autopay?",
+        "routing": "Billing Department",
+        "suggested_action": "Verify autopay enrollment date and payment logs; reverse late fee if system error is confirmed.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2075.6
+        }
+      }
+    },
+    {
+      "id": 37,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "phone number",
+          "charge from yesterday"
+        ],
+        "intent": [
+          "Account Update",
+          "Dispute"
+        ],
+        "issue_type": "Phone Number Update and Charge Dispute",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "We will update your phone number in our records right away. Regarding the charge from yesterday, we will open a dispute case for you. According to our Dispute & Refund Resolution Policy, once the charge is verified, refunds for duplicate or disputed transactions are processed within 24\u201148 hours, and any merchant refunds may take 5\u201110 business days to appear on your account.",
+        "routing": "Billing Department",
+        "suggested_action": "Update the customer's phone number in the system and open a formal dispute case for the yesterday's charge.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1553.6
+        }
+      }
+    },
+    {
+      "id": 38,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "current balance",
+          "last two transfers"
+        ],
+        "intent": [
+          "Account Access",
+          "Inquiry"
+        ],
+        "issue_type": "Balance inquiry and transfer processing delay",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I can provide you with your current account balance. Regarding the recent transfers, they are usually processed within 1-2 business days, but occasional delays can occur due to verification steps. I\u2019ll review the specific transactions to determine why they took longer and get back to you with more details.",
+        "routing": "Support Team",
+        "suggested_action": "Retrieve the customer's current balance and check the processing logs for the last two transfers to explain any delays.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1798.1
+        }
+      }
+    },
+    {
+      "id": 39,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "card",
+          "store",
+          "credit limit increase"
+        ],
+        "intent": [
+          "Card Issue",
+          "Inquiry"
+        ],
+        "issue_type": "Card Decline; Credit Limit Increase Eligibility",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I'm sorry to hear your card was declined at the store. Declines can occur if a security block is active or if a travel notice hasn't been set for international use. Please verify that there are no recent security holds on your account, and consider adding a travel notice if you are traveling. Regarding your question about a credit limit increase, our Credit Limit Increase policy states that you are eligible if your account is at least six months old, you have had no late payments in the past 12 months, and your current utilization is below 50%. If you meet these criteria, we can proceed with a review of your request.",
+        "routing": "Support Team",
+        "suggested_action": "Check the decline reason in the transaction logs, confirm no security block, advise the customer on travel notices, and assess credit limit increase eligibility based on account age, payment history, and utilization.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1774.1
+        }
+      }
+    },
+    {
+      "id": 40,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "old checking account",
+          "new savings account"
+        ],
+        "intent": [
+          "Account Closure",
+          "Account Opening"
+        ],
+        "issue_type": "Close and Open Account",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "We can close your existing checking account and open a new savings account for you. Per our Account Services Policy, an account may be closed once all pending transactions have cleared and the balance is zero or withdrawn, and closure requests are processed within 1-2 business days. We'll begin the closure process and start the savings account setup right away.",
+        "routing": "Account Services",
+        "suggested_action": "Verify the checking account balance is zero and pending transactions are cleared, then process the closure and initiate opening of a new savings account.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1702.6
+        }
+      }
+    },
+    {
+      "id": 41,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "fraudulent charge",
+          "reward points"
+        ],
+        "intent": [
+          "Fraud Suspicion",
+          "Complaint"
+        ],
+        "issue_type": "Unauthorized Transaction",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "Thank you for notifying us about the unauthorized charge on your card. We have opened a fraud investigation and have flagged your account for enhanced monitoring, as outlined in our Phishing & Social Engineering Response Policy. Please do not click any suspicious links or share personal information, and continue to monitor your account over the next 30 days. We will also review the activity related to your reward points to determine why the points from last month's purchases have not been posted and will update you shortly.",
+        "routing": "Fraud Team",
+        "suggested_action": "Investigate the unauthorized transaction, flag the account for enhanced fraud monitoring, and review the reward points activity to resolve the missing points.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2492.0
+        }
+      }
+    },
+    {
+      "id": 42,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "travel notice",
+          "next week",
+          "card",
+          "international usage"
+        ],
+        "intent": [
+          "Account Update",
+          "Inquiry"
+        ],
+        "issue_type": "Travel Notice Setup and International Card Usage Inquiry",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "You can set a travel notice up to 90 days in advance, covering the dates and countries you\u2019ll be visiting. While a travel notice helps prevent fraud\u2011related declines, it isn\u2019t required for your card to work abroad\u2014our debit and credit cards are enabled for international use by default unless a security block is active. I\u2019ll go ahead and set the travel notice for your trip next week. Please let me know the countries you\u2019ll be visiting if you\u2019d like them added to the notice.",
+        "routing": "Account Services",
+        "suggested_action": "Create a travel notice for the upcoming trip dates and confirm the card is active for international transactions.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2286.5
+        }
+      }
+    },
+    {
+      "id": 43,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": true,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "recurring subscription",
+          "cancellation fee"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Account Update"
+        ],
+        "issue_type": "Subscription Cancellation & Fee Inquiry",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "Thank you for reaching out. Per our Billing & Fees Policy, a cancellation fee is only applied if a subscription is cancelled within the first 90 days of enrollment. After 90 days, cancellation is free of charge. We'll review the enrollment date of your subscription and, if the fee was charged in error, arrange for a reversal. In the meantime, we will proceed with cancelling the recurring payment as requested.",
+        "routing": "Billing Department",
+        "suggested_action": "Verify the subscription enrollment date, cancel the recurring payment, and determine if the cancellation fee should be reversed based on the 90\u2011day rule.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1672.4
+        }
+      }
+    },
+    {
+      "id": 44,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "account lock",
+          "unrecognized charge"
+        ],
+        "intent": [
+          "Account Access",
+          "Dispute"
+        ],
+        "issue_type": "Account Lock & Unrecognized Charge",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "I\u2019m sorry you\u2019re experiencing these issues. I\u2019ll work to unlock your account after the multiple login attempts and investigate the charge you don\u2019t recognize. Our policy requires us to verify unrecognized charges against the merchant descriptor, and if the amount is over $100 and remains unidentified, we will escalate it to the Fraud Team within one business hour. We\u2019ll keep you updated on both the account access restoration and the charge investigation.",
+        "routing": "Support Team",
+        "suggested_action": "Reset the account lock and guide the customer through login recovery; initiate verification of the unrecognized charge using merchant descriptor data and, if needed, prepare to escalate to Fraud Team.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2389.1
+        }
+      }
+    },
+    {
+      "id": 45,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide more details about what you are trying to do and the problem you are experiencing?",
+        "entities": [],
+        "intent": [
+          "Technical Issue"
+        ],
+        "issue_type": "General Issue",
+        "needs_clarification": true,
+        "priority": "Low",
+        "response": "I'm sorry to hear you're experiencing difficulties. To help you further, could you let us know what you were trying to do and any error messages you may have seen?",
+        "routing": "Technical Support",
+        "suggested_action": "Ask the customer for additional details to determine the specific technical problem.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1057.4
+        }
+      }
+    },
+    {
+      "id": 46,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please let us know what specific assistance you need with your account (e.g., login issues, updating personal details, or a question about a transaction)?",
+        "entities": [],
+        "intent": [
+          "Account Access"
+        ],
+        "issue_type": "General Account Assistance",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We\u2019re happy to help with your account. To provide the best assistance, could you let us know the specific issue you\u2019re experiencing?",
+        "routing": "Support Team",
+        "suggested_action": "Obtain clarification on the customer's specific account need before proceeding.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1569.6
+        }
+      }
+    },
+    {
+      "id": 47,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please let us know which request or transaction you are referring to, so we can assist you further?",
+        "entities": [
+          "delay"
+        ],
+        "intent": [
+          "Complaint",
+          "Inquiry"
+        ],
+        "issue_type": "Delay in Resolution",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We understand you\u2019re concerned about a delay. To help us resolve this quickly, could you provide more details about the specific request or transaction you\u2019re waiting on?",
+        "routing": "Support Team",
+        "suggested_action": "Gather clarification on the customer's pending request or transaction before proceeding.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1814.4
+        }
+      }
+    },
+    {
+      "id": 49,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide more details about the issue you are experiencing?",
+        "entities": [],
+        "intent": [
+          "Complaint"
+        ],
+        "issue_type": "General Dissatisfaction",
+        "needs_clarification": true,
+        "priority": "Low",
+        "response": "We\u2019re sorry to hear you\u2019re not satisfied with our service. Could you please share more details so we can assist you further?",
+        "routing": "Support Team",
+        "suggested_action": "Ask the customer for specific details about their dissatisfaction to determine the appropriate resolution.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1732.7
+        }
+      }
+    },
+    {
+      "id": 50,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide more details about the payment issue, such as the transaction date, amount, and any error messages you received?",
+        "entities": [],
+        "intent": [
+          "Billing Issue"
+        ],
+        "issue_type": "Payment Problem",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We\u2019re sorry you\u2019re experiencing a payment issue. To help us resolve this quickly, could you please share the transaction date, amount, and any error messages you saw?",
+        "routing": "Billing Department",
+        "suggested_action": "Obtain additional payment details from the customer before escalating.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1776.8
+        }
+      }
+    },
+    {
+      "id": 51,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide more details about the situation you are referring to?",
+        "entities": [],
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "General Question",
+        "needs_clarification": true,
+        "priority": "Low",
+        "response": "Thank you for reaching out. To assist you better, could you please provide more details about what you\u2019re asking about?",
+        "routing": "Support Team",
+        "suggested_action": "Ask the customer for clarification to understand the specific issue.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1195.4
+        }
+      }
+    },
+    {
+      "id": 52,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide the account number and any recent transaction details or dates related to the missing funds?",
+        "entities": [
+          "missing funds"
+        ],
+        "intent": [
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Missing Funds",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We understand your concern about missing money. To investigate this promptly, we\u2019ll need a few details such as the account involved and any recent transactions you notice. Once we have that information, we can begin a thorough review.",
+        "routing": "Fraud Team",
+        "suggested_action": "Request additional account and transaction details from the customer, then forward the case to the Fraud Team for investigation.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1633.2
+        }
+      }
+    },
+    {
+      "id": 53,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please describe the specific action you\u2019re trying to perform in the app and any error messages you see?",
+        "entities": [],
+        "intent": [
+          "Technical Issue"
+        ],
+        "issue_type": "App functionality issue",
+        "needs_clarification": true,
+        "priority": "Low",
+        "response": "I\u2019m sorry you\u2019re experiencing trouble with the app. To help resolve this, could you let us know which feature isn\u2019t working and any details such as error messages or the device you\u2019re using?",
+        "routing": "Technical Support",
+        "suggested_action": "Gather detailed information about the app issue from the customer before proceeding with troubleshooting.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1263.1
+        }
+      }
+    },
+    {
+      "id": 54,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide the date, amount, and merchant name of the transaction where your card was declined?",
+        "entities": [
+          "card"
+        ],
+        "intent": [
+          "Card Issue"
+        ],
+        "issue_type": "Card Decline",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "I'm sorry to hear your card was declined. To investigate the issue, could you share the date, amount, and merchant of the transaction where this occurred?",
+        "routing": "Support Team",
+        "suggested_action": "Collect transaction details from the customer and check decline reason in the card processing system",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1779.2
+        }
+      }
+    },
+    {
+      "id": 55,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": false,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": false,
+      "model_output": {
+        "clarifying_question": "Could you please specify which fee you are referring to (e.g., monthly account fee, transaction fee, overdraft fee) and provide any relevant account details?",
+        "entities": [
+          "fees"
+        ],
+        "intent": [
+          "Inquiry"
+        ],
+        "issue_type": "Fees Inquiry",
+        "needs_clarification": true,
+        "priority": "Low",
+        "response": "Thank you for reaching out. I'd be happy to help clarify our fee structure. Could you please provide more details about the specific fee you have a question about?",
+        "routing": "Billing Department",
+        "suggested_action": "Ask the customer for details about the specific fee and account context to provide an accurate answer.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1827.4
+        }
+      }
+    },
+    {
+      "id": 56,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide the date, amount, and recipient of the transfer, as well as any error messages you received?",
+        "entities": [
+          "last transfer"
+        ],
+        "intent": [
+          "Technical Issue"
+        ],
+        "issue_type": "Transfer Discrepancy",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "We understand that your recent transfer may not have processed as expected. To investigate further, could you share the date, amount, and recipient of the transfer, along with any error messages you saw?",
+        "routing": "Support Team",
+        "suggested_action": "Collect detailed transfer information from the customer and review transaction logs for discrepancies.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2130.2
+        }
+      }
+    },
+    {
+      "id": 57,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.667,
+      "routing_correct": true,
+      "priority_correct": true,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "duplicate transaction"
+        ],
+        "intent": [
+          "Billing Issue",
+          "Complaint",
+          "Dispute"
+        ],
+        "issue_type": "Duplicate Charge",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "We understand you've been charged twice for the same purchase. We'll review the transaction and work to correct the duplicate charge. Our team will investigate and, if confirmed, issue a refund. We'll keep you updated on the progress.",
+        "routing": "Billing Department",
+        "suggested_action": "Investigate the duplicate charge and initiate refund process",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1673.3
+        }
+      }
+    },
+    {
+      "id": 58,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.5,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": true,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "$60 charge",
+          "gas station",
+          "card"
+        ],
+        "intent": [
+          "Fraud Suspicion"
+        ],
+        "issue_type": "Unauthorized Transaction",
+        "needs_clarification": false,
+        "priority": "High",
+        "response": "We understand that an unauthorized $60 charge appeared on your account from a gas station you have never visited. Per our Fraud & Unauthorized Transaction Policy, we have immediately frozen your card and opened a fraud case. The charge will be provisionally credited within 10 business days while we verify the merchant descriptor data. We will keep you updated on the investigation and can issue a replacement card if needed.",
+        "routing": "Fraud Team",
+        "suggested_action": "Freeze the card, open a fraud case, verify merchant descriptor, issue provisional credit, arrange replacement card if required",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 1582.0
+        }
+      }
+    },
+    {
+      "id": 59,
+      "intent_exact_match": true,
+      "intent_jaccard": 1.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "savings account"
+        ],
+        "intent": [
+          "Account Closure"
+        ],
+        "issue_type": "Savings Account Closure Request",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "Thank you for letting us know you\u2019d like to close your savings account. To proceed, we\u2019ll need to verify your identity and confirm the account details. Once verified, we\u2019ll complete the closure and provide you with a confirmation reference. If you have any remaining balance, we can arrange a transfer to another account of your choice or issue a final statement. Please let us know if you\u2019d like to receive the confirmation by email or mail.",
+        "routing": "Account Services",
+        "suggested_action": "Verify customer identity, confirm savings account details, process closure, and send confirmation reference to the customer",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 5843.0
+        }
+      }
+    },
+    {
+      "id": 60,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "",
+        "entities": [
+          "online banking",
+          "password reset"
+        ],
+        "intent": [
+          "Account Access"
+        ],
+        "issue_type": "Online Banking Login Failure",
+        "needs_clarification": false,
+        "priority": "Medium",
+        "response": "I\u2019m sorry you\u2019re unable to access your online banking. Let\u2019s verify your identity and reset your password to restore access. Please do not click any links or reply to any messages asking for your password or PIN, as the bank never requests this information. If you received any such messages, let us know so we can flag your account for enhanced monitoring. We\u2019ll work to get you back into your account promptly.",
+        "routing": "Support Team",
+        "suggested_action": "Verify customer identity, reset online banking credentials, check for account lockout, and ask if any suspicious messages were received.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2817.4
+        }
+      }
+    },
+    {
+      "id": 61,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.333,
+      "routing_correct": false,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please describe the specific problem you are experiencing, including any error messages or steps you have taken?",
+        "entities": [],
+        "intent": [
+          "Technical Issue",
+          "Complaint"
+        ],
+        "issue_type": "Repeated Technical Issue",
+        "needs_clarification": true,
+        "priority": "High",
+        "response": "We\u2019re sorry you\u2019re still experiencing this issue. To help us resolve it as quickly as possible, could you provide more details about the problem you\u2019re encountering?",
+        "routing": "Technical Support",
+        "suggested_action": "Gather detailed description of the issue from the customer and check prior support tickets before escalating.",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2181.2
+        }
+      }
+    },
+    {
+      "id": 62,
+      "intent_exact_match": false,
+      "intent_jaccard": 0.0,
+      "routing_correct": true,
+      "priority_correct": false,
+      "issue_type_correct": false,
+      "output_complete": true,
+      "retrieval_correct": null,
+      "model_output": {
+        "clarifying_question": "Could you please provide the date, merchant name, and amount of the transaction where your card was declined?",
+        "entities": [
+          "card"
+        ],
+        "intent": [
+          "Card Issue"
+        ],
+        "issue_type": "Card Decline",
+        "needs_clarification": true,
+        "priority": "Medium",
+        "response": "I'm sorry to hear your card was declined. To help resolve this, could you please share the date, merchant, and amount of the transaction where the decline occurred?",
+        "routing": "Support Team",
+        "suggested_action": "Gather transaction details and check decline reasons",
+        "_meta": {
+          "model": "openai/gpt-oss-120b",
+          "latency_ms": 2292.6
+        }
+      }
     }
   ],
   "failures": [],
-  "consistency_results": [],
+  "consistency_results": [
+    {
+      "original_id": 1,
+      "paraphrase_id": 57,
+      "priority_stable": true,
+      "routing_stable": true,
+      "intent_jaccard": 1.0
+    },
+    {
+      "original_id": 6,
+      "paraphrase_id": 58,
+      "priority_stable": true,
+      "routing_stable": true,
+      "intent_jaccard": 0.5
+    },
+    {
+      "original_id": 15,
+      "paraphrase_id": 59,
+      "priority_stable": false,
+      "routing_stable": true,
+      "intent_jaccard": 1.0
+    },
+    {
+      "original_id": 24,
+      "paraphrase_id": 60,
+      "priority_stable": false,
+      "routing_stable": false,
+      "intent_jaccard": 0.0
+    },
+    {
+      "original_id": 30,
+      "paraphrase_id": 61,
+      "priority_stable": true,
+      "routing_stable": false,
+      "intent_jaccard": 0.0
+    },
+    {
+      "original_id": 51,
+      "paraphrase_id": 62,
+      "priority_stable": false,
+      "routing_stable": true,
+      "intent_jaccard": 0.0
+    }
+  ],
   "total_messages": 62,
-  "successful_runs": 32,
+  "successful_runs": 62,
   "failed_runs": 0
 }
